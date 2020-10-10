@@ -15,7 +15,10 @@ Este é o [terceiro aplicativo](https://youtu.be/CnIVjXE2sh8) que desenvolvo par
 
 <a href="#índice"><h1 align="center">Telas</h1></a>
 <p align="center">
-  <img alt="Em breve" width="100" src="#" />
+  <img width="230" src="https://i.ibb.co/xjNZRMv/In-Shot-20201010-160215232-online-video-cutter-com.gif" />
+  <img width="230" src="https://i.ibb.co/2FbTdML/In-Shot-20201010-161729831.gif" />
+  <img width="230" src="https://i.ibb.co/Rc1pK87/In-Shot-20201010-160215232-online-video-cutter-com-1.gif" />
+  <img width="230" src="https://i.ibb.co/Y0hnJFN/In-Shot-20201010-160215232-online-video-cutter-com-2.gif" />
 </p>
 
 # [Instalação](#índice)
