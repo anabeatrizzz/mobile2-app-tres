@@ -1,6 +1,6 @@
 # Índice
 * [O que aprendi? :thinking:](#o-que-aprendi-thinking)
-* [Tela](#tela)
+* [Telas](#telas)
 * [Instalação](#instalação)
 * [Ajuda](#ajuda)
 * [Como contribuir](#como-contribuir)
@@ -13,7 +13,7 @@ Este é o [terceiro aplicativo](https://youtu.be/CnIVjXE2sh8) que desenvolvo par
 - O valor dentro das chaves do atributo `defaultSource` em `Image` é usado para quando a imagem de `source` não está carregada por completo.
 - `activeOpacity` controla a opacidade do componente que está por fora do `TouchableOpacity`.
 
-<a href="#índice"><h1 align="center">Tela</h1></a>
+<a href="#índice"><h1 align="center">Telas</h1></a>
 <p align="center">
   <img alt="Em breve" width="100" src="#" />
 </p>
