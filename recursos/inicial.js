@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { SafeAreaView, StyleSheet, Text, View, Image, TextInput, TouchableOpacity, Animated } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import ts from "../assets/ts.gif";
 import tsStatic from '../assets/ts-static.gif';
 
@@ -33,28 +33,28 @@ class Inicio extends React.Component{
   render(){
     return(
       <>
-				<View style={estilos.aplicativo}>
-					<View>
-						<TouchableOpacity activeOpacity={100} onPress={this.handleDica}>
-							<Image defaultSource={tsStatic} style={estilos.gifStyle} source={ts} />
-						</TouchableOpacity>
-					</View>
-					<View style={estilos.conteudo}>
-						<TextInput style={estilos.entrada} placeholder="Login" onChangeText={ (login) => {this.setState({ login })} }
+        <View style={estilos.aplicativo}>
+          <View>
+            <TouchableOpacity activeOpacity={100} onPress={this.handleDica}>
+              <Image defaultSource={tsStatic} style={estilos.gifStyle} source={ts} />
+            </TouchableOpacity>
+          </View>
+          <View style={estilos.conteudo}>
+            <TextInput style={estilos.entrada} placeholder="Login" onChangeText={ (login) => {this.setState({ login })} }
             />
-						<TextInput style={estilos.entrada} placeholder="Senha" secureTextEntry={true} onChangeText={ (senha) => {this.setState({ senha })} }
+            <TextInput style={estilos.entrada} placeholder="Senha" secureTextEntry={true} onChangeText={ (senha) => {this.setState({ senha })} }
             />
-						<TouchableOpacity onPress={this.handleEntrar} style={estilos.botao}
+            <TouchableOpacity onPress={this.handleEntrar} style={estilos.botao}
             >
-							<Text style={estilos.textoBotao}>Entrar</Text>
-						</TouchableOpacity>
-						<TouchableOpacity onPress={this.handleCadastrar} style={estilos.cadastrar}
+              <Text style={estilos.textoBotao}>Entrar</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={this.handleCadastrar} style={estilos.cadastrar}
             >
-							<Text style={estilos.cadastrarFonte}>Cadastrar</Text>
-						</TouchableOpacity>
-						<Text>{'\n'}</Text>
-						<Text style={estilos.textoDicaUm}>{this.state.dica.substr(0, 21)}</Text>
-						<Text style={estilos.textoDicaDois}>{this.state.dica.substr(21)}</Text>
+              <Text style={estilos.cadastrarFonte}>Cadastrar</Text>
+            </TouchableOpacity>
+            <Text>{'\n'}</Text>
+            <Text style={estilos.textoDicaUm}>{this.state.dica.substr(0, 21)}</Text>
+            <Text style={estilos.textoDicaDois}>{this.state.dica.substr(21)}</Text>
           </View>
         </View>
       </>
