@@ -5,10 +5,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 // Pages
-import HomeScreen from './pages/home-screen';
-import RightCredentials from './pages/right-credentials';
-import NotFound from './pages/not-found';
-import WrongCredentials from './pages/wrong-credentials';
+import HomeScreen from './pages/HomeScreen/HomeScreen';
+import RightCredentials from './pages/RightCredentials/right-credentials';
+import NotFound from './pages/NotFound/not-found';
+import WrongCredentials from './pages/WrongCredentials/wrong-credentials';
 
 const { Navigator, Screen } = createStackNavigator();
 
