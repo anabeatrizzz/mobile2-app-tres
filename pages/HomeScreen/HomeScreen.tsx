@@ -6,8 +6,8 @@ import tsStatic from '../../assets/ts-static.gif';
 import { LOGIN, PASSWORD } from '@env';
 import styles from './HomeScreen.css';
 
-export default function HomeScreen() {
-  const navigation = useNavigation()
+export default function HomeScreen(props: any) {
+  //const navigation = useNavigation()
   const [state, setState] = useState({
     login: "",
     password: "",
@@ -16,9 +16,9 @@ export default function HomeScreen() {
 
   function handleLogin() {
     if (state.login == LOGIN.toUpperCase() && state.password == PASSWORD.toUpperCase()) {
-      navigation.navigate('RightCredentials')
+      props.navigation.navigate('RightCredentials')
     } else {
-      navigation.navigate("WrongCredentials")
+      props.navigation.navigate("WrongCredentials")
     }
   }
 
@@ -52,6 +52,8 @@ export default function HomeScreen() {
         <TextInput
           style={styles.input}
           placeholder="Login"
+          testID="input1"
+          key="loginInput"
           onChangeText={
             (login) => {
               setState({ ...state, login })
@@ -62,6 +64,8 @@ export default function HomeScreen() {
         <TextInput
           style={styles.input}
           placeholder="Password"
+          testID="input2"
+          key="passwordInput"
           secureTextEntry={true}
           onChangeText={
             (password) => {
@@ -69,22 +73,29 @@ export default function HomeScreen() {
             }
           }
         />
+        
         <TouchableOpacity
           onPress={() => handleLogin()}
           style={styles.btn}
+          testID="btn1"
         >
           <Text style={styles.btnTxt}>Entrar</Text>
         </TouchableOpacity>
+        
         <TouchableOpacity
           onPress={() => handleSignUp()}
           style={styles.signUp}
+          testID="btn2"
         >
           <Text style={styles.signUpTxt}>Cadastrar</Text>
         </TouchableOpacity>
+        
         <Text>{'\n'}</Text>
+        
         <Text style={styles.firstTipTxt}>
           {state.tip.substr(0, 21)}
         </Text>
+        
         <Text style={styles.secondTipTxt}>
           {state.tip.substr(21)}
         </Text>
