@@ -8,7 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './pages/HomeScreen/HomeScreen';
 import RightCredentials from './pages/RightCredentials/right-credentials';
 import NotFound from './pages/NotFound/not-found';
-import WrongCredentials from './pages/WrongCredentials/wrong-credentials';
+import WrongCredentials from './pages/WrongCredentials/WrongCredentials';
 
 const { Navigator, Screen } = createStackNavigator();
 

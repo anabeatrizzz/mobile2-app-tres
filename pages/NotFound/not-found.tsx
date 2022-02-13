@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import tsPagina404 from '../assets/ts-pagina404.gif';
-import tsPQStatic from '../assets/ts-pagina404-static.png';
+import tsPagina404 from '../../assets/ts-pagina404.gif';
+import tsPQStatic from '../../assets/ts-pagina404-static.png';
 
 class Pagina404 extends React.Component{
   constructor(props){

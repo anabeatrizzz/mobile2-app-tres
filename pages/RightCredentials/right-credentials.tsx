@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import tsEntrou from '../assets/ts-entrou.gif';
-import tsEntrouStatic from '../assets/ts-entrou-static.png';
+import tsEntrou from '../../assets/ts-entrou.gif';
+import tsEntrouStatic from '../../assets/ts-entrou-static.png';
 
 class Entrou extends React.Component{
   constructor(props){

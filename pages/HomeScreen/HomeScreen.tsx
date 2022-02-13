@@ -1,9 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { Text, View, Image, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
-import ts from "../assets/ts.gif";
-import tsStatic from '../assets/ts-static.gif';
+import ts from "../../assets/ts.gif";
+import tsStatic from '../../assets/ts-static.gif';
 import { LOGIN, PASSWORD } from '@env';
 import styles from './HomeScreen.css';
 
