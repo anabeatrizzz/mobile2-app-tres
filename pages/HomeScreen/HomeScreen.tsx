@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { useNavigation, NavigationProp } from '@react-navigation/native';
 import { Text, View, Image, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
 import ts from "../../assets/ts.gif";
 import tsStatic from '../../assets/ts-static.gif';
 import { LOGIN, PASSWORD } from '@env';
 import styles from './HomeScreen.css';
 
-export default function HomeScreen(props) {
-  //console.log(props)
-  //const navigation = useNavigation()
+export default function HomeScreen({ navigation }) {
   const [state, setState] = useState({
     login: "",
     password: "",
@@ -17,14 +14,14 @@ export default function HomeScreen(props) {
 
   function handleLogin() {
     if (state.login == LOGIN.toUpperCase() && state.password == PASSWORD.toUpperCase()) {
-      props.navigation.navigate('RightCredentials')
+      navigation.navigate({ key: 'RightCredentials'})
     } else {
-      props.navigation.navigate('WrongCredentials')
+      navigation.navigate({ key: 'WrongCredentials' })
     }
   }
 
   function handleSignUp() {
-    props.navigation.navigate('NotFound')
+    navigation.navigate({ key: 'NotFound' })
   }
 
   function handleTip() {

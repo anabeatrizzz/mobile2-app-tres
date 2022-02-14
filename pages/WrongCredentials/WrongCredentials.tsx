@@ -21,7 +21,7 @@ export default function WrongCredentials() {
         />
         <Text>{'\n'}</Text>
         <Text style={styles.TSTxt}>Twilight Sparkle diz:</Text>
-        <Text style={styles.txt}>Estas não são as credenciais corretas!</Text>
+        <Text testID="errorTxt" style={styles.txt}>Estas não são as credenciais corretas!</Text>
         <TouchableOpacity
           onPress={() => handleIndex()}
           style={styles.btn}
