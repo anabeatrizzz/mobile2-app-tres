@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react-native'
+import { render, fireEvent } from '@testing-library/react-native'
 import HomeScreen from "./HomeScreen";
 
 describe('shows mainly components', () => {
@@ -15,15 +15,27 @@ describe('shows mainly components', () => {
 })
 
 describe('funcionality of buttons', () => {
-  it('enter button navigates to wrong credentials screen', () => {
+  it('enter button navigates to wrong credentials screen', async () => {
+    const { getByTestId, getByText } = render(<HomeScreen />)
 
+    const enterBtn = await getByTestId("btn1")
+    const loginInput = await getByTestId("input1")
+    const passwordInput = await getByTestId("input2")
+    
+    fireEvent.changeText(loginInput, "abc")
+    fireEvent.changeText(passwordInput, "def")
+    fireEvent.press(enterBtn)
+
+    const textError = await getByText("Estas não são as credenciais corretas!")
+
+    expect(textError).toBeTruthy()
   })
 
-  it('enter button navigates to right credentials screen', () => {
+  // it('enter button navigates to right credentials screen', () => {
 
-  })
+  // })
 
-  it('sign up button navigates to not found screen', () => {
+  // it('sign up button navigates to not found screen', () => {
 
-  })
+  // })
 })
