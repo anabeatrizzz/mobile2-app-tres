@@ -14,14 +14,14 @@ export default function HomeScreen({ navigation }) {
 
   function handleLogin() {
     if (state.login == LOGIN.toUpperCase() && state.password == PASSWORD.toUpperCase()) {
-      navigation.navigate({ key: 'RightCredentials'})
+      navigation.navigate('RightCredentials')
     } else {
-      navigation.navigate({ key: 'WrongCredentials' })
+      navigation.navigate('WrongCredentials')
     }
   }
 
   function handleSignUp() {
-    navigation.navigate({ key: 'NotFound' })
+    navigation.navigate('NotFound')
   }
 
   function handleTip() {
@@ -39,6 +39,7 @@ export default function HomeScreen({ navigation }) {
           onPress={() => handleTip()}
         >
           <Image
+            testID="poneiImg"
             defaultSource={tsStatic}
             style={styles.gifStyle}
             source={ts}
@@ -52,6 +53,7 @@ export default function HomeScreen({ navigation }) {
           placeholder="Login"
           testID="input1"
           key="loginInput"
+          value={state.login.length > 0 ? state.login : undefined}
           onChangeText={
             (login) => {
               setState({ ...state, login })
@@ -65,6 +67,7 @@ export default function HomeScreen({ navigation }) {
           testID="input2"
           key="passwordInput"
           secureTextEntry={true}
+          value={state.password.length > 0 ? state.password : undefined}
           onChangeText={
             (password) => {
               setState({ ...state, password })
