@@ -1,12 +1,10 @@
 import React from 'react';
-import { useNavigation } from '@react-navigation/native';
 import { Text, View, Image, TouchableOpacity, SafeAreaView } from 'react-native';
 import tsErradas from '../../assets/ts-erradas.gif';
 import tsErradasStatic from '../../assets/ts-erradas-static.png';
 import styles from './WrongCredentials.css';
 
-export default function WrongCredentials() {
-  const navigation = useNavigation();
+export default function WrongCredentials({ navigation }) {
   function handleIndex(){
     navigation.navigate('HomeScreen')
   }
@@ -24,6 +22,7 @@ export default function WrongCredentials() {
         <Text testID="errorTxt" style={styles.txt}>Estas não são as credenciais corretas!</Text>
         <TouchableOpacity
           onPress={() => handleIndex()}
+          testID="backToHomeScreenBtn"
           style={styles.btn}
         >
           <Text style={styles.btnTxt}>Volte à página inicial</Text>

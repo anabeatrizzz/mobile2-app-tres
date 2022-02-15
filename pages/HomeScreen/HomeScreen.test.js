@@ -6,12 +6,14 @@ import { LOGIN, PASSWORD } from '@env'
 describe('shows mainly components', () => {
   it('login and password inputs', () => {
     const { getAllByTestId } = render(<HomeScreen />)
-    expect(getAllByTestId(/input[1-2]/).length).toBe(2)
+    const inputsLength = getAllByTestId(/input[1-2]/).length
+    expect(inputsLength).toBe(2)
   })
 
   it('enter and signup buttons', () => {
     const { getAllByTestId } = render(<HomeScreen />)
-    expect(getAllByTestId(/btn[1-2]/).length).toBe(2)
+    const btnsLength = getAllByTestId(/btn[1-2]/).length
+    expect(btnsLength).toBe(2)
   })
 })
 
@@ -48,7 +50,9 @@ describe('funcionality of buttons', () => {
     const navigate = jest.fn();
     const { getByTestId } = render(<HomeScreen navigation={{ navigate }} />)
     const signUpBtn = await getByTestId("btn2")
+    
     fireEvent.press(signUpBtn)
+    
     expect(navigate).toHaveBeenCalledWith("NotFound");
   })
 
@@ -57,7 +61,9 @@ describe('funcionality of buttons', () => {
     const poneiImg = getByTestId("poneiBtn")
     const firstTipTxt = getByTestId("firstTipTxt")
     const secondTipTxt = getByTestId("secondTipTxt")
+    
     fireEvent.press(poneiImg)
+    
     expect(firstTipTxt).toBeTruthy()
     expect(secondTipTxt).toBeTruthy()
   })
