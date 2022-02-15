@@ -6,7 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 // Pages
 import HomeScreen from './pages/HomeScreen/HomeScreen';
-import RightCredentials from './pages/RightCredentials/right-credentials';
+import RightCredentials from './pages/RightCredentials/RightCredentials';
 import NotFound from './pages/NotFound/not-found';
 import WrongCredentials from './pages/WrongCredentials/WrongCredentials';
 

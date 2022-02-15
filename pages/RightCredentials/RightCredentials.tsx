@@ -1,37 +1,32 @@
 import React from 'react';
 import { Text, View, Image, SafeAreaView } from 'react-native';
-import tsErradas from '../../assets/ts-erradas.gif';
-import tsErradasStatic from '../../assets/ts-erradas-static.png';
-import styles from './WrongCredentials.css';
+import tsEntrou from '../../assets/ts-entrou.gif';
+import tsEntrouStatic from '../../assets/ts-entrou-static.png';
+import styles from './RightCredentials.css';
 import Button from '../../components/button/Button';
 
-export default function WrongCredentials({ navigation }) {
+export default function RightCredentials({ navigation, route }) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Image
-          defaultSource={tsErradasStatic}
+          defaultSource={tsEntrouStatic}
           style={styles.img}
-          source={tsErradas}
+          source={tsEntrou}
         />
 
         <Text>{'\n'}</Text>
-
+        
         <Text style={styles.TSTxt}>
           Twilight Sparkle diz:
         </Text>
-        <Text
-          testID="errorTxt"
-          style={styles.txt}
-        >
-          Estas não são as credenciais corretas!
-        </Text>
-
-        <Button />
-
         <Text style={styles.txt}>
-          e me peça ajuda!
+          Credenciais corretas! Parabéns! Agora você pode...
         </Text>
+        
+        <Text>{'\n'}</Text>
+        
+        <Button />
       </View>
     </SafeAreaView>
   )
