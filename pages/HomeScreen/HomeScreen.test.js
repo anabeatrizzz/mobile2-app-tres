@@ -51,4 +51,14 @@ describe('funcionality of buttons', () => {
     fireEvent.press(signUpBtn)
     expect(navigate).toHaveBeenCalledWith("NotFound");
   })
+
+  it('ponei image shows text', () => {
+    const { getByTestId } = render(<HomeScreen />)
+    const poneiImg = getByTestId("poneiBtn")
+    const firstTipTxt = getByTestId("firstTipTxt")
+    const secondTipTxt = getByTestId("secondTipTxt")
+    fireEvent.press(poneiImg)
+    expect(firstTipTxt).toBeTruthy()
+    expect(secondTipTxt).toBeTruthy()
+  })
 })

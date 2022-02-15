@@ -36,6 +36,7 @@ export default function HomeScreen({ navigation }) {
       <View>
         <TouchableOpacity
           activeOpacity={100}
+          testID="poneiBtn"
           onPress={() => handleTip()}
         >
           <Image
@@ -93,11 +94,11 @@ export default function HomeScreen({ navigation }) {
         
         <Text>{'\n'}</Text>
         
-        <Text style={styles.firstTipTxt}>
+        <Text testID="firstTipTxt" style={styles.firstTipTxt}>
           {state.tip.substr(0, 21)}
         </Text>
         
-        <Text style={styles.secondTipTxt}>
+        <Text testID="secondTipTxt" style={styles.secondTipTxt}>
           {state.tip.substr(21)}
         </Text>
       </View>
