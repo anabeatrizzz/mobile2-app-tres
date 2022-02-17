@@ -1,8 +1,10 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react-native';
-import WrongCredentials from './WrongCredentials'
+import { render, fireEvent, cleanup } from '@testing-library/react-native';
+import { useRoute } from "@react-navigation/core";
+import WrongCredentials from './WrongCredentials';
 
 describe('shows mainly components', () => {
+  afterEach(cleanup)
   it('back to home screen button', () => {
     const { getByTestId } = render(<WrongCredentials />)
     const backToHomeScreenBtn = getByTestId('backToHomeScreenBtn')
@@ -17,8 +19,10 @@ describe('shows mainly components', () => {
 })
 
 describe('button press', () => {
+  afterEach(cleanup)
   it('button navigates to home screen', async () => {
     const navigate = jest.fn();
+    useRoute.mockReturnValue({ name: "WrongCredentials" })
     const { getByTestId } = render(<WrongCredentials navigation={{ navigate }} />)
     const backToHomeScreenBtn = await getByTestId('backToHomeScreenBtn')
     fireEvent.press(backToHomeScreenBtn)

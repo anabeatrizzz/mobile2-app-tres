@@ -1,9 +1,10 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react-native';
+import { render, fireEvent, cleanup } from '@testing-library/react-native';
 import HomeScreen from "./HomeScreen";
 import { LOGIN, PASSWORD } from '@env'
 
 describe('shows mainly components', () => {
+  afterEach(cleanup)
   it('login and password inputs', () => {
     const { getAllByTestId } = render(<HomeScreen />)
     const inputsLength = getAllByTestId(/input[1-2]/).length
@@ -18,6 +19,7 @@ describe('shows mainly components', () => {
 })
 
 describe('funcionality of buttons', () => {
+  afterEach(cleanup)
   it('enter button navigates to wrong credentials screen', async () => {
     const navigate = jest.fn();
     const { getByTestId } = render(<HomeScreen navigation={{ navigate }} />)
