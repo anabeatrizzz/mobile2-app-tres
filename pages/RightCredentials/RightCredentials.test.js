@@ -21,7 +21,6 @@ describe('button press', () => {
   afterEach(cleanup)
   it('button navigates to home screen', async () => {
     const navigate = jest.fn();
-    useRoute.mockReturnValue({ name: "RightCredentials" })
     const { getByTestId } = render(<RightCredentials navigation={{ navigate }} />)
     const backToHomeScreenBtn = await getByTestId('backToHomeScreenBtn')
     fireEvent.press(backToHomeScreenBtn)

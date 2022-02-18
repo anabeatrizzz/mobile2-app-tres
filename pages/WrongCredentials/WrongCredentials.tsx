@@ -7,7 +7,6 @@ import styles from './WrongCredentials.css';
 import Button from '../../components/button/Button';
 
 export default function WrongCredentials({ navigation }) {
-  //const routeName = useRoute().name
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
@@ -29,7 +28,7 @@ export default function WrongCredentials({ navigation }) {
           Estas não são as credenciais corretas!
         </Text>
 
-        <Button navigation={navigation} />
+        <Button btnColor={"#c5d0ec"} bgColor={"#243870"} btnTxt={"Voltar"} navigation={navigation} />
 
         <Text style={styles.txt}>
           e me peça ajuda!

@@ -7,7 +7,6 @@ import styles from './RightCredentials.css';
 import Button from '../../components/button/Button';
 
 export default function RightCredentials({ navigation }) {
-  //const routeName = useRoute().name
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
@@ -28,7 +27,7 @@ export default function RightCredentials({ navigation }) {
         
         <Text>{'\n'}</Text>
         
-        <Button navigation={navigation} />
+        <Button btnColor={"#c5d0ec"} bgColor={"#243870"} btnTxt={"Voltar"} navigation={navigation} />
       </View>
     </SafeAreaView>
   )

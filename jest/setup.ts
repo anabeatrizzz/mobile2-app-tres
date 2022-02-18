@@ -1,7 +1,5 @@
 import 'react-native-gesture-handler/jestSetup';
 
-jest.mock("@react-navigation/core");
-
 jest.mock('react-native-reanimated', () => {
   const Reanimated = require('react-native-reanimated/mock');
 
